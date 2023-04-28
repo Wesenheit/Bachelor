@@ -1,0 +1,1 @@
+rclone copy store:DormantBH/ /home/mitra/Files/Formal/Bachelor/plots
