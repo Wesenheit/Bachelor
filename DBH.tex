@@ -48,7 +48,7 @@
 %\dziedzina{13.200}
 %\dziedzina{13.2 Fizyka}
 
-\date{NAN 2022 r.}
+\date{May 2023}
 
 \keywords{Dormant Black Holes,}
 
@@ -58,7 +58,13 @@
     \maketitle
     \let\cleardoublepage\clearpage
 \begin{abstract}
-    \lipsum[2,7]
+    In the work analysis of light curves from OGLE data was performed with goal to look for objects with possible Black Hole companions based on the 
+    ellipsoidal modulation of light curves. Each object is examined using Spectral Energy Density fits allowing to distinguish between stars 
+    composed from two objects with different temperature and single objects. Selection process resulted in $14$ potential objects out of which 
+    one turned out to be spotted star while rest are considered as Black Hole binaries candidates. Detailed analysis of the objects is conducted 
+    estimating basic parameters of objects like temperature, mass, radius and in some cases estimate of radial velocity. Although at the end 
+    alternative explanation for ellipsoidal modulation is given no conclusion is reached as objects should be further investigated using 
+    spectroscopic observation in order to accept or reject hypothesis about compact companions.
 \end{abstract}
 
 \tableofcontents
@@ -66,7 +72,7 @@
 \chapter{Introduction}
 \hspace{1cm} According to current knowledge most of the massive stars end their evolution as black holes, further investigation suggest existence of $\mathcal{O}(10^8)$ 
 stellar mass BH's \citep{brown_scenario_1994} in our galaxy. Despite huge theoretical expectations only few tens of such objects have been found up to day. Most of them either emit X-rays through
-accretion mechanism or can distinguish themselves with exotic astrometry/radial velocity. Search for X-ray emission nor exotic movement are viable method to search BH search.
+accretion mechanism or can distinguish themselves with exotic astrometry/radial velocity. Neither search for X-ray emission nor exotic movement are viable methods to search BH search.
 In the first case binary system is typically composed of either low mass star which overflows it's Roche lobe
 (BH-LMXB) or high mass star which is accreting mass onto companion BH via stellar wind. In first case X-ray emission mostly have transient character \citep{bambi_transient_2016}
 making it hard to observe them due to the accretion disc instabilities \citep{lasota_disc_2001}. What is crucial to emphasize is relative small period of the Black Hole binaries 
@@ -136,7 +142,7 @@ as there had closed analytical form and small relative error.
 \section{Limitations}
 In previous section new corrected formula was introduced allowing to predict amplitudes of fourier series based on physical parameters $q$,$f$, $i$. After correction 
 our formula have relatively good accuracy but what need to be emphasised are limitations due to other physical phenomena. To begin with MN93 formula is valid only for circular orbits. 
-In order to lift that limitation one can reproduce results using other type of expansion such as TODO ENGEL. Moreover if the binary will be compact we need to take into account
+In order to lift that limitation one can reproduce results using other type of expansion such as \citep{engel_beer_2020}. Moreover if the binary will be compact we need to take into account
 relativistic beaming effect. Following \citep{loeb_periodic_2003} 
 \begin{equation}
     F_{\lambda}=F_{\lambda,0}\left(1-B\frac{v_r}{c}\right)
@@ -161,17 +167,17 @@ was assumed. This value
 solely represents effects of temperature, gravity and chemical composition making it very important as it's encapsulating all parameters we don't know. 
 Exact value of parameter greatly influence modified mass ratio due to which inference of mass without exact knowledge of $\alpha_2$ is impossible.
 This fact lead authors of method to introduce second parameter which was originally defined as $16$th percentile of our estimator $q_{mmr}$. Solely role of this 
-parameter is to take into account uncertainty of $\alpha$ acting as lower bound of $q_{mmr}$. In this work other parameter was introduced denoted as $q\tilde{q}_{mmr}$ and defined as
+parameter is to take into account uncertainty of $\alpha$ acting as lower bound of $q_{mmr}$. In this work other parameter was introduced denoted as $\tilde{q}_{mmr}$ and defined as
 \begin{equation*}\label{lower}
     A_2(\tilde{q}_{mmr},1,\pi/2,1.1)=\tilde{A_2}-\Delta A_2
 \end{equation*}
 where $\Delta A_2$ is uncertainty of estimate of $A_2$ coefficient. This approach not only allow to filter out those stars which can have large amplitude due to 
-surprisingly high value of $\alpha_2$ which is taken into acount by decreasing $\alpha_2$ in definition \ref{lower} to $1.2$ but also allows to filter out stars
-that have high amplitude but also relativly high uncertainty $\Delta A_2$.
+surprisingly high value of $\alpha_2$ which is taken into account by decreasing $\alpha_2$ in definition \ref{lower} to $1.1$ but also allows to filter out stars
+that have high amplitude but also relatively high uncertainty $\Delta A_2$.
 \section{Selection process}
-In order to provide reliable and robust way to search for compact companions following procedure using aformentioned estimators of $q_{mmr}$ was used.
+In order to provide reliable and robust way to search for compact companions following procedure using aforementioned estimators of $q_{mmr}$ was used.
 For each object two coefficients $q_{mmr}$ and $\tilde{q}_{mmr}$ were calculated and each object for which $\tilde{q}_{mmr}>1$ was qualified as candidate for compact companion.
-Secondly each object with amplitude $\tilde{A_2}>0.24$ was removed from the list. One can find, that using \ref{qmmr} one need mass ratio of order $q_{mmr}\approx 1000$
+Secondly each object with amplitude $\tilde{A_2}>0.24$ was removed from the list. One can find, that using \ref{qmmr} mass ratio of order $q_{mmr}\approx 1000$ is needed
 to obtain configuration with such great amplitude 
 suggesting that modulation is not due to ellipsoidal effect but rather caused by other type of star variability. Exact threshold of $\tilde{A_2}$ can be a matter of debate due to 
 previously mentioned dependence on $\alpha_2$ which is unknown. 
@@ -181,14 +187,28 @@ previously mentioned dependence on $\alpha_2$ which is unknown.
 From OGLE database two object samples were analysed using described method. First sample consisted of $6620$ object from Small Magellanic Cloud (SMC), Large Magellanic Cloud (LMC) and 
 Magellanic Bridge  (MBR) while second sample consisted of stars from Galactic Disc (GD) and from the direction towards Galactic Bulge (BLG) ($1895$ objects). While first sample consisted 
 of any variable objects found in the direction of Magellanic Clouds second sample was constructed by cross matching OGLE data with list of objects from Gaia DR 3 \citep{gaia_collaboration_gaia_2022} with values of 
-velocity amplitude ({\it{rv\_amplitude\_robust}}) higher then $100$ km/s. Light curves used in the analysis were collected during $4$ th season of OGLE \citep{udalski_ogle-iv_2015},
- \citep{udalski_optical_1992} and were collected in $I$ band. Before preprocessing data objects with brightness lower then
+velocity amplitude ({\it{rv\_amplitude\_robust}}) higher then $100$ km/s. Light curves used in the analysis were collected during $4$ th season of OGLE (\citet*{udalski_ogle-iv_2015},
+ \citet*{udalski_optical_1992}) and were collected in $I$ band. Before preprocessing data objects with brightness lower then
 $17$ mag  were removed as faint objects would be unsuitable for any kind of spectroscopic observations.
 \begin{figure}[H]
     \begin{center}
         \includegraphics[scale=0.52]{plots/map_sample.png}
     \end{center}
     \caption{Distribution of objects in each sample.}
+\end{figure}
+
+\begin{figure}[H]
+    \begin{center}
+        \includegraphics[scale=0.6]{plots/HR_LMC_SMC.png}
+    \end{center}
+    \caption{HR diagram based on Gaia Data for objects that reside in Magellanic Cloud}
+\end{figure}
+
+\begin{figure}[H]
+    \begin{center}
+        \includegraphics[scale=0.5]{plots/HR.png}
+    \end{center}
+    \caption{HR diagram based on Gaia Data for objects with measured parallax}
 \end{figure}
 
 Each object was analysed using ANOVA (analysis of variance) method \citep{schwarzenberg-czerny_advantage_1989} in order to determine period of light curve.
@@ -206,12 +226,14 @@ remove pulsating stars that pollute our sample. After this part of preprocessing
     \caption{Distribution of periods from the analysed samples.}
 \end{figure}
 
+
+
 \section{Spectral Energy Distribution}
 Each object was cross matched  with Gaia DR3 catalogue obtaining parallax (denoted from here as $\pi_0$ together with uncertainty denoted as $\sigma_{\pi}$) estimates of objects. If parallax was statistically significant ($\pi>3\sigma_{\pi}$)
 it was used to derive distance to object. For objects towards Magellanic Clouds many entries lacked statistically significant parallax indicating that they really reside in Magellanic Clouds
 and do not line up accidentally.
 In this case distance estimate $d_0$ and distance uncertainty $\sigma_d$ were based on the work \citep{jacyszyn-dobrzeniecka_ogle-ing_2016} assuming that presented distribution 
-of cepheid reflects underlying distribution of stars in sample.
+of cepheids reflects underlying distribution of stars in sample.
 In the case of LMC and SMC assumed distance estimates were  $d_{LMC}=49.93\pm1.79$ kpc and  $d_{SMC}=64.62\pm4.95$ kpc respectively. 
 
 To further investigate nature of objects spectral energy distribution analysis was 
@@ -273,14 +295,14 @@ Following catalogues were used to assemble SEDs:
     \item GALEX Survey \citep{bianchi_galex_2011}
     \item Spitzer IRAC data \citep{meixner_spitzer_2006}
     \item Denis survey  \citep{denis_vizier_2005}
-    \item SkyMapper DR2 ()\citet*{wolf_skymapper_2018}\citet*{onken_skymapper_2019})
+    \item SkyMapper DR2 (\citet*{wolf_skymapper_2018}\citet*{onken_skymapper_2019})
     \item XMM Optical Monitor data \citep{page_xmm-newton_2012}
 \end{itemize}
 \item Catalogues exclusive to the Magellanic Clouds:
 \begin{itemize}
     \item VISTA Magellanic Cloud survey DR4 \citep{cioni_vizier_2017}
     \item Denis cataloug of objects in Magellanic Clouds \citep{cioni_denis_2000}
-    \item Magellanic Clouds Photometric Survey: SMC and LMC \citep{zaritsky_magellanic_2002} \citep{zaritsky_magellanic_2004}
+    \item Magellanic Clouds Photometric Survey: SMC and LMC (\citet*{zaritsky_magellanic_2002} \citet*{zaritsky_magellanic_2004})
 \end{itemize}
 \item Catalogues exclusive to the Galactic Disc:
 \begin{itemize}
@@ -326,6 +348,7 @@ that can indicate existence of accretion disc. Complete list of objects together
 What should be emphasised here is meaning of BIC score. As we assume little about our objects especially we do not investigate best fitting 
 $\log{g}$ which can be crucial to estimate stellar parameters. Due to this effect it's unreasonable to calculate values of $\chi^2$ and compare them 
 across objects as few of them can be better fitted with given metallicity/$\log{g}$.
+Single model SED fits together with light curves are presented in appendix.
 \chapter{Results}
 \section{Physical parameters of objects}
 Each of $14$ final object was further investigated using available data in order to determine physical properties of objects.
@@ -334,7 +357,7 @@ second is spectral type M. $13$ stars from the list have measured parallax from 
 $11$ objects were selected based on good fit with single star model while one was selected due to counterpart emission i X-ray.
 
 For each entry mass of object was estimated using PARSEC
-\citep{costa_mixing_2019},\citep{costa_multiple_2019} evolutionary tracks. Assuming solar like metallicity simple approximate fits were obtained by choosing best fitting entry from PARSEC track using temperature and luminosity estimates from
+(\citet*{costa_mixing_2019},\citet*{costa_multiple_2019}) evolutionary tracks. Assuming solar like metallicity simple approximate fits were obtained by choosing best fitting entry from PARSEC track using temperature and luminosity estimates from
 SED fits.
 \begin{table}[H]
     \normalsize
@@ -342,7 +365,7 @@ SED fits.
     \centering
     \begin{tabular}{lllllll}
     Name& $T$ [K] & $R$ [$\textrm{R}_\odot$]&$E(B-V)$ & $d$ [kpc] & BIC & $M_{PARSEC}$ [$\textrm{M}_\odot$]\\
-    BLG986.08.7     & $6118^{+19}_{-20}$ & $2.22\pm 0.01$ & $0.226$ & $0.83\pm 0.01$ & $1.3$ \\
+    BLG986.08.7     & $6118^{+19}_{-20}$ & $2.22\pm 0.01$ & $0.226$ & $0.83\pm 0.01$ & $193.3$ & $1.3$ \\
     GD2246.03.18414 & $7246\pm 41$ & $1.63\pm 0.02$ & $0.273$ & $0.71\pm 0.01$ & $91.4$ & $0.8$ \\
     GD1097.20.23000 & $6068\pm 13$ & $1.90\pm0.01$ & $0.221$  & $0.56\pm 0.008$ & $386$ & $1.2$ \\
     GD1448.27.17    & $8065\pm 39$ & $4.13\pm0.04$ & $0.611$  & $1.30\pm 0.02$ & $162.8$ & $2.3$ \\
@@ -362,7 +385,7 @@ SED fits.
 
 \section{Radial velocity semi-amplitude estimation from Gaia DR3 data}
 Half of the objects from final list have available high-quality radial velocity information that is normally available for bright stars from Gaia DR3 catalogue. While estimate of radial velocity 
-is based on median of observed radial velocity, error of this estimate is based on the epoch standard deviation of observed values. According to (ref) radial velocity error $\delta v$ 
+is based on median of observed radial velocity, error of this estimate is based on the epoch standard deviation of observed values. According to \citep{katz_gaia_2022} radial velocity error $\delta v$ 
 is calculated via equation
 \begin{align}
     \delta v=\sqrt{\sigma_{med}^2+0.11^2}\\
@@ -378,29 +401,48 @@ variance of velocity will be equal to
 \begin{equation}
     \sigma^2=\frac{K^2}{2}
 \end{equation}.
-Using this fact one can estimate semi-amplitude of velocity using gaia measurements (that will be denoted from here as $K_{Gaia}$) as 
+Using this fact one can estimate semi-amplitude of velocity using Gaia measurements (that will be denoted from here as $K_{Gaia}$) as 
 \begin{equation}
     K_{Gaia}=\sqrt{\sigma^2}\sqrt{2}=2\sqrt{\frac{N}{\pi}\left((\delta v)^2-0.11^2\right)}
 \end{equation}
 This radial velocity amplitude then is used to calculate binary mass function for each of objects using definition 
-\begin{equation}
-    f(M_1,M_2,i)=\frac{M_1^3 \sin{i}^3}{(M_1+M_2)^2}=\frac{K^3 P}{2\pi G}
+\begin{equation}\label{mass}
+    f(M_1,M_2,i)=\frac{M_2^3 \sin{i}^3}{(M_1+M_2)^2}=\frac{K^3 P}{2\pi G}
 \end{equation}
 where $P$ stands for period while $G$ is gravitational constant. For each object with RV estimates based on aforementioned method mass functions were obtained and together with
 information about radial velocity estimates are presented in table \ref{mass_function_table}.
+For each object with PARSEC mass estimate lower boundary of companions mass was calculated by solving equation \ref{mass}
+with  $\sin{(i)}=1$. Each of minimum masses were then plotted versus period of binary and are presented on \ref{lower_mass}
+and placed into table as $M_{min}$.
+
+In \citep{katz_gaia_2022} criterion was presented allowing to test whether radial velocity indicates variability based on values of {\it{rv\_chisq\_pvalue}}
+and {\it{rv\_renormalised\_gof}}. Criterion states that objects with $N>10$, $T_{eff}\in [3900,8000]$ K, {\it{rv\_chisq\_pvalue}}$<0.01$ 
+and {\it{rv\_renormalised\_gof}}$>4$ can be safely considered to be variable in radial velocity. Each object was tested using described method 
+and results are presented in the table (in case of not enough data objects were labeled as unsure).
 \begin{table}[H]
-    \begin{tabular}{lllllll}
-    Name            & Period [d]             & $RV$ [km/s]     & $N$  &  $\delta v$  [km/s]   & $K_{Gaia}$ [km/s]  & $f(M_1,M_2,i)$                   \\
-    GD1549.19.348   & $2.8224$   & $36.72$ & $21$ & $8.64$  & $44.67$   & $0.026$ \\
-    GD2246.03.18414 & $0.4270$ & $27.68$ & $25$ & $23.03$ & $129.93$ & $0.097$  \\
-    GD1097.20.23000 & $0.4570$ & $36.5$  & $10$ & $21.03$ & $75.03$  & $0.020$  \\
-    BLG986.08.7     & $0.5132$  & $-1.69$ & $15$ & $18.11$ & $79.14$   & $0.026$  \\
-    BLG931.27.36745 & $0.7050$   & $-4.35$ & $8$  & $14.81$ & $47.26$  & $0.0077$ \\
-    GD1448.27.17    & $1.2410$  & $33.08$ & $22$ & $7.69$  & $40.69$  & $0.0086$ \\
-    GD1070.18.22288 & $45.1467$  & $38.71$ & $20$ & $7.66$  & $38.65$  & $0.27$  \\
+    \footnotesize
+    \centering
+    %\def\arraystretch{1.5}
+    \setlength{\tabcolsep}{3pt}
+    \begin{center}
+    \begin{tabular}{lllllllll}
+    Name & Period [d]& $RV$ [km/s]& $N$  &  $\delta v$  [km/s]   & $K_{Gaia}$ [km/s]  & $f(M_1,M_2,i)$ [M$_{\odot}$]& $M_{min}$ [M$_{\odot}$]&Variable RV?\\
+%    GD1549.19.348   & $2.8224$   & $36.72$ & $21$ & $8.64$  & $44.67$   & $0.026$ &\\
+    GD2246.03.18414 & $0.4270$ & $27.68$ & $25$ & $23.03$ & $129.93$ & $0.097$  & $0.80$ & Yes\\
+    GD1097.20.23000 & $0.4570$ & $36.5$  & $10$ & $21.03$ & $75.03$  & $0.020$  & $0.37$& Unsure\\
+    BLG986.08.7     & $0.5132$  & $-1.69$ & $15$ & $18.11$ & $79.14$   & $0.026$  & $0.43$& Yes\\
+    BLG931.27.36745 & $0.7050$   & $-4.35$ & $8$  & $14.81$ & $47.26$  & $0.0077$ & $0.28$& Unsure\\
+    GD1448.27.17    & $1.2410$  & $33.08$ & $22$ & $7.69$  & $40.69$  & $0.0086$ & $0.40$& Yes\\
+    GD1070.18.22288 & $45.1467$  & $38.71$ & $20$ & $7.66$  & $38.65$  & $0.27$  & -- & Yes\\
     \end{tabular}
+    \end{center}
+    
     \caption{Estimated mass function using Gaia radial velocity error.}\label{mass_function_table}
-    \end{table}
+\end{table}
+\begin{figure}
+    \includegraphics{plots/mass_minimum_estimate.png}
+    \caption{Lower bound of companions mass.}\label{lower_mass}
+\end{figure}
 
 \section{Detailed analysis of objects}
 In this section detailed characteristic of individual objects will be provided. It will be divided into $3$ subsections where first two will quickly cover information available for 
@@ -418,7 +460,7 @@ One of the objects with rather low temperature of
 $T\approx 3800$ K has radius $R\approx 10$ $\textrm{M}_{\odot}$ and was quite distant from any evolutionary track in PARSEC database as it's probably giant stripped by 
 it's companion. Object can be also found in ASAS-SN database \citep{jayasinghe_asas-sn_2019} under id J170801.81-410255.6 where it's classified as rotational variable star
 with half of the period found in this work. It was observed by ASAS-SN in $V$ and SDSS $g$ band allowing to compare light curves with OGLE. Moreover 
-it was observed in SDSS $i$ band by Bochum Disc Survey \citep{hackstein_bochum_2015}. Comparsion between all light curves can be find on the plot \ref{compar}
+it was observed in SDSS $i$ band by Bochum Disc Survey \citep{hackstein_bochum_2015}. Comparison between all light curves can be found on the plot \ref{comp}
 \begin{figure}[H]
     \includegraphics[scale=0.5]{plots/GD1070.18.22288/lc_comparsion.png}
     \caption{Light curves of GD1070.18.2288 in $4$ different bands}\label{comp}
@@ -470,10 +512,8 @@ estimated parameters suggest it's blue giant with spectral type O according to s
 Estimated period of the variable is nearly half of day, such short period paired together with such high mass suggest very compact setup of stars.
 PARSEC evolutionary tracks estimate mass of object around $16$  $\textrm{M}_{\odot}$. Star was published already by \citep{pawlak_ogle_2016} and classified as contact binary. Although
 no companion is visible in SED distribution it might hide itself in the light of primary star.
-Unfortunately only IRAC data is available, lack of WISE 
-magnitudes can be problematic when one would like to look for possible companion star with low temperature.
-Although NEOWISE-R (ref) reports one particular measurement from close neighbourhood ($<1$ arcsec) it lacks values from $W3$ or $W4$ bands
-which are crucial if one would like to search for colder companion.
+No WISE source could be found as nearest detection is nearly $10$ arcsec away from the position, lack of any observations 
+in W3 and W4 bands is very problematic as they allow to probe object in low temperatures.
 No radial velocity from Gaia is available so mass function estimate remains unknown.
 \begin{figure}[H]
     \centering
@@ -481,26 +521,100 @@ No radial velocity from Gaia is available so mass function estimate remains unkn
     \caption{Single model SED fit for SMC720.28.40576.}
     \label{SMC720:sed}
 \end{figure}
-Available data paired with MCMC allow to put some constrains on the parameters of objects. As primary star is supergiant
-second SED fit is performed assuming $\log g_1=4$ and $\log g_2=4$ in order to determine upper limit on companions luminosity. 
+Available data paired with MCMC allow to put some constrains on the parameters of objects even if chain had not converged. 
 When MCMC chain isn't able to determine significance of some parameters it's reconstructing prior distribution 
-which results in uniformly distributed region of samples. Results of MCMC sampling was ploted over samples from HYG
- database\footnote{https://www.astronexus.com/hyg} and are presented on figure \ref{posterior}
+which results in uniformly distributed region of samples. Second MCMC run was performed and $64000$ samples were drown from 
+posterior distribution. 
+As primary star is supergiant second SED fit is performed assuming $\log g_1=4$ and $\log g_2=4$ as one expect secondary component to be 
+main sequence star. 
+Results of MCMC sampling were plotted over samples from HYG
+database\footnote{https://www.astronexus.com/hyg} and are presented on figure \ref{posterior}
 \begin{figure}[H]
     \includegraphics[scale=0.6]{plots/posterior_estimate_SMC720.png}
     \caption{Posterior estimate for parameters of SMC720.28.40576 highlighted in red (primary component)
     and in blue (secondary component).}\label{posterior}
 \end{figure}
-Although we can rule out any objects on giant branch many regions on HR diagram can host potential secondary companion. Most importantly
-few regions of Main Sequence stars cannot be ruled out giving plausible candidate for secondary companion.
+We can see, that samples fill the space almost uniformly but omit region populated with cold and luminous stars as 
+those are to luminous in infrared to reproduce observed values.
+Although we can rule out any objects on giant branch many regions on HR diagram can host potential secondary companion, most importantly
+few regions of main sequence stars cannot be ruled out giving plausible candidate for secondary companion.
+\subsection{Rest of objects}
+Majority of objects on the list can be characterized as objects with intermediate temperature. The typically have radius in order of 
+few solar radii and spectral type from G to A. Although no detailed information about objects was found two of them
+are listed as non-single stars in Gaia DR3 Eclipsing Binaries catalog (BLG986.08.7, BLG931.27.36745).
+Catalog contains stars with collected light curves that matched precomputed set of eclipsing/ellipsoidal binaries. 
+Detailed processing steps can be found in Gaia documentation \footnote[1]{https://gea.esac.esa.int/archive/documentation/GDR3/Data\_analysis/chap\_cu4nss/sec\_cu4nss\_eclipsing\_bin/}
+. After matching the light curve with precomputed set best model serves as start in local optimiser 
+trying to further refine solution. Model is solved with respect to parameters:
+\begin{itemize}
+    \item fillout factors of stars $s_1$, $s_2$.
+    \item inclination $i$
+    \item temperature ratio $T_1/T_2$ (effective values)
+    \item argument of periastron $\omega$
+    \item time $t_0$ of eclipse
+\end{itemize}. 
+Both objects reported by Gaia DR3 are fitted with contact binary model where $s_1>1$ and $s_2>1$ with almost no 
+temperature difference (ratio close to $1$). This results pointed out that it's possible to obtain similar results 
+in the contact system with same temperature for both stars fooling SED fit. 
+This line was further investigated and each object was fitted using 
+PHOEBE simulation software (\citet*{wilson_realization_1971},\citet*{prsa_computational_2005},\citet*{conroy_physics_2020}). Model was constructed in such way that both stars shared temperature $T$ (infered from 
+single model SED) and were overflowing their Roche lobes.
+While masses of objects were free parameters radii are chooses to retain total luminosity of system $R_1^2+R_2^2=R_{single}^2$ where $R_{single}$ denotes 
+fitted value from SED. Two masses together with inclination $i$ form three parameters that are fitted to minimize $\chi^2$ using Nelder-Mead algorithm.
+Fitted values together with $\chi^2$ values are presented in the table \ref{light_curve_fits} together with predicted semi-amplitude of velocity together 
+with estimated one if available from Gaia DR3 data.
+\begin{table}[H]
+    \normalsize
+    \begin{center}
+    \begin{tabular}{lllllll}
+    Name & $M_1$ [M$_{\odot}$] & $M_2$ [M$_{\odot}$] & $i$ & $K_{estimate}$ [km/s] & $K_{Gaia}$ [km/s]&$\chi^2/dof$ \\
+    BLG931.27.36745 & $0.81$ & $0.20$ & $49.71^\circ$ & $36.23$ & $47.26$ & $828.44/74$ \\
+    GD1097.20.2300 & $1.45$ & $0.36$ & $59.98^\circ$ &$57.97$& $75.03$ & $2745.79/118$ \\
+    BLG986.08.7 & $1.42$ & $0.36$ & $46.65^\circ$ & $117.52$ & $79.14$ & $777.11/72$ \\
+    GD2246.03.1814 & $1.05$ & $0.26$ & $53^\circ$ & $73.28$ & $129.93$ & $1926.87/124$\\
+    GD1448.27.17 & $1.54$ & $0.39$ & $48.30^\circ$ & $84.23$ & $40.69$ & $4629.40/184$\\
+    \end{tabular}
+    \caption{Table with parameters used to fit light curves of objects together with radial velocities estimates and 
+    normalized $\chi^2$ values.}
+    \end{center}
+    
+    \caption{Estimated mass function using Gaia radial velocity error.}\label{light_curve_fits}
+\end{table}
+One example light curve fit for object BLG931.27.36745 can be seen on the plot \ref{lc_plot}.
+One could ask how presented fits compare to the theory introduced at the beginning where it was theoretized that 
+such objects should have mass ratio $q>1$. Theory presented in \citep{gomel_search_2021} together with PHOEBE simulations treated only semi-detached case
+so modified mass ratio is strictly limited to those types of objects. Although there is no guarantee that presented models
+describe actual parameters of binaries there are good alternative for compact companions. Contrary to compact objects 
+which are quite uncommon presented contact binaries are much more numerous.
+\begin{figure}
+    \begin{center}
+        \includegraphics[scale=0.7]{plots/modeling_phoebe_contact_BLG931.27.36745.jpg}
+    \end{center}
+    \caption{Light curve fit with contact binary for BLG931.27.36745 calculated using PHOEBE.}\label{lc_plot}
+\end{figure}
 
-\subsection{Rest of objects}.
-TO DO
-%Majority of objects on the list can be characterized as objects with intermediate temperature. The typically have radius in order of 
-%few solar radii and spectral type from G to A. Few of them  
+\chapter{Discussion}
+Out of total $8515$ objects investigated in this study only $14$ objects were classified as plausible candidates for binaries with compact companions.
+Further investigation into sample revealed one rotational variable and suggested alternative explanation for $12$ objects in the form of
+contact binaries with intermediate mass ratio. For $7$ objects mass function was calculated and revealed no interesting objects as for most of them 
+$f(m_1,m_2,i)<0.1$ M$_{\odot}$. Only object with higher mass function is GD1070.18.22288 which is likely rotational variable with unknown orbital period 
+resulting in useless mass function. It's hard to determine what is accuracy of mass function estimation  which can be skewed by many factors.
+Those doubts begin to strengthen if we assume that objects are composed of two stars with similar temperature as suggested by light curve analysis.
+In this case it's unknown what to expect as spectra of objects are composed of two base objects which can be hard to process by Gaia pipeline.
+Up to date only one work \citep{nagarajan_spectroscopic_2023} tries to perform any kind of follow-up observations of 
+candidate BH binaries reported in \citep{gomel_gaia_2022} which were identified using method presented in \citep{gomel_search_2021}. 
+This publication is one step ahead with respect to this work as spectroscopic follow-up was performed allowing to estimate amplitude of velocity 
+with much higher precision then very crude estimation based on Gaia DR3 radial velocity measurements. Nevertheless presented results match those 
+presented in the work as most of the objects share many physical parameters. It was pointed out that 
+method used to identify objects is based on the assumption that objects nearly fill their Roche Lobes what occurs during relatively
+short period of binaries lifetime. Contact binaries although rare outcome of evolution are expected to be quite common compared to any kind of compact 
+objects. Light curve modeling with contact binaries isn't able to explain all of variability so fit might need some refining but even if 
+contact model fails in some cases it's still provides quite good explanation for observed variability. Most importantly estimated amplitude of such 
+modulation can easily reach values set at threshold for which $q_{mmr}>1$ resulting in huge number of false positives.
+Although no final conclusion is reached results seem to support conclusion of \citep{nagarajan_spectroscopic_2023}. In order to further 
+characterize objects more observations should be conducted.
 
-\chapter{Summary}
-TO DO
+
 \bibliography{Bachelor} 
 \bibliographystyle{mnras}
 \begin{appendices}
@@ -516,7 +630,7 @@ where $X_i$ is sample from $\mathcal{U}(0,1)$. This allows to determine, that if
 \end{equation}
 where we used the simplification that $\overline{V}\approx v_0$. Now we would like to obtain some statistical properties of this variance estimator such as expected value and variance.
 We can clearly see that $\mathbb{E}\cos{(4\pi X_i)}=0$ while $\Var(\cos{4\pi X_i})=\frac{1}{8}$. While first value is straightforward as mean of cosine is equal to zero second one 
-is more complicated but follows from the fact that distribution of $\cos{(4\pi X_i)}$ is arcsine distributed and it's variance it's well known. Hence we see, that 
+is more complicated but follows from the fact that $\cos{(4\pi X_i)}$ is arcsine distributed and it's variance it's well known. Hence we see, that 
 \begin{align}\label{semi}
     \mathbb{E} \sigma^2 = \frac{K^2}{2N}\cdot N = \frac{K^2}{2}\\ 
     \Var (\sigma^2) = \frac{K^4}{32N^2}\cdot N = \frac{K^4}{32N}
