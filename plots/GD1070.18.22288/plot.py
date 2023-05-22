@@ -14,7 +14,7 @@ T_boch=[55686.40097, 55687.27062, 56411.253669, 56412.268657, 56553.009201, 5655
 mag_boch=[11.362845, 11.392318, 11.4020195, 11.417272, 11.555197, 11.627949, 11.619389, 11.3612, 11.60123, 11.589565, 11.491863, 11.463467, 11.590549, 11.594222, 11.372154, 11.361826, 11.333306, 11.443802, 11.562275, 11.468747, 11.54358, 11.571766, 11.51438, 11.481539, 11.409691, 11.388672, 11.320535, 11.323443, 11.483155, 11.519778, 11.570538, 11.437965, 11.445021, 11.500936, 11.501298, 11.470494, 11.431529, 11.51373, 11.426185, 11.419385, 11.463061, 11.477302, 11.440823, 11.420283, 11.457893, 11.485142]
 time=np.remainder(T_boch,P)/P
 ax1.scatter(time,mag_boch,marker=".")
-ax1.grid()
+#ax1.grid()
 ax1.set_title("Bochum Disc Survey")
 ax1.set_xlabel("Phase")
 ax1.set_ylabel("SDSS i [mag]")
@@ -24,7 +24,7 @@ ax2=axes.flatten()[1]
 ogle=np.loadtxt("GD1070.18.22288.dat",skiprows=1)
 time_ogle=np.remainder(ogle[:,0],P)/P
 ax2.errorbar(time_ogle,ogle[:,1],ogle[:,2],fmt="g.")
-ax2.grid()
+#ax2.grid()
 ax2.set_title("OGLE")
 ax2.set_ylabel("I [mag]")
 ax2.set_xlabel("Phase")
@@ -36,7 +36,7 @@ data_V=pd.read_csv('ASASSN-V J170801.81-410255.6.csv')
 #data_V=pd.concat((data_V1,data_V2))
 phase_ASAS_V=np.remainder(data_V["hjd"]-2400000.5 ,P)/P
 ax3.errorbar(phase_ASAS_V,data_V["mag"],data_V["mag_err"],fmt="b.")
-ax3.grid()
+#ax3.grid()
 ax3.set_title("ASAS-SN (V)")
 ax3.set_ylabel("V [mag]")
 ax3.set_xlabel("Phase")
@@ -48,7 +48,7 @@ data_g=data_g[data_g["mag"]<13.4]
 data_g=data_g[data_g["mag_err"]<0.02]
 phase_ASAS_g=np.remainder(data_g["HJD"]-2400000.5 ,P)/P
 ax4.errorbar(phase_ASAS_g,data_g["mag"].astype(float),data_g["mag_err"].astype(float),fmt="b.")
-ax4.grid()
+#ax4.grid()
 ax4.set_title("ASAS-SN (g)")
 ax4.set_xlabel("Phase")
 ax4.set_ylabel("SDSS g [mag]")
