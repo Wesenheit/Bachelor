@@ -53,7 +53,7 @@
       \vspace{2cm plus 1.5fill}
       \begin{flushright}\large
         \begin{tabular}{l}
-          Thesis was written under supervision of \\
+          Thesis written under supervision of \\
            \@opiekun
         \end{tabular}
       \end{flushright}
