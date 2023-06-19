@@ -66,7 +66,7 @@
         \begin{subfigure}{0.6\textwidth}
             \centering
             \includegraphics[width=1\textwidth]{plots/#1_HR.png}
-            \caption{Position in HR diagram together with the best-fitting PARSEC evolutionary track.}
+            \caption{Position in the HR diagram together with the best-fitting PARSEC evolutionary track.}
         \end{subfigure}
         \end{adjustwidth}
    \end{figure}
@@ -256,12 +256,12 @@ There are few approaches that one can take to extend the MN93 formula, in this w
 In the original work, each coefficient was multiplied by a correction $C_i(q,f,i)$ calculated using the PHOEBE simulation software. For each
 Fourier coefficient, a relevant model was fitted to PHOEBE data and then compared, allowing one to find such function $C(q,f,i)$ that 
 \begin{equation}
-    \left(C(q,f,i)-\frac{A_{\textrm{Phoebe}}}{A_{MN93}}\right)^2
+    \left(C(q,f,i)-\frac{A_{\textrm{Phoebe}}}{A_{\textrm{MN93}}}\right)^2
 \end{equation}
 is minimised. In \citet{gomel_search_2021-1}, the following functions were chosen for the second and third correction coefficients
 \begin{align}
-    C_2(q,f)=1+\left(0.0379+\frac{0.005}{0.0446+q}\right)\left(\frac{f}{1.0909-f}\right)\\
-    C_3(q,f)=1+\frac{(1+0.0698q\sin^2{i})f^6+0.2075\cdot f^2}{(2.0223+0.3880\ln{q})f+\sin^4{i}}
+    C_2(q,f,i)=1+\left(0.0379+\frac{0.005}{0.0446+q}\right)\left(\frac{f}{1.0909-f}\right)\\
+    C_3(q,f,i)=1+\frac{(1+0.0698q\sin^2{i})f^6+0.2075\cdot f^2}{(2.0223+0.3880\ln{q})f+\sin^4{i}}
 \end{align}
 as they have a closed analytical form and a small relative error. 
 \section{Limitations}
@@ -332,8 +332,8 @@ From the OGLE \citep{udalski_optical_1992} database following two samples were a
 The light curves used in the analysis were collected during the $4$ th season of OGLE \citet{udalski_ogle-iv_2015},
 and were collected in the $I$ band.
 Detailed positions of objects from the original samples in the sky are presented in the figure \ref{map}. Then for each entry the nearest Gaia source
-was found and for objects with statistically significant parallax (value higher than three times it's statistical deviation) a colour-magnitude
-diagram using the Gaia data was constructed and is presented in the figure \ref{HR_galactic}. Similarly a colour-magnitude diagram was constructed for
+was found and for objects with statistically significant parallax (value higher than three times it's statistical deviation) a color-magnitude
+diagram using the Gaia data was constructed and is presented in the figure \ref{HR_galactic}. Similarly a color-magnitude diagram was constructed for
 objects without statistical significant parallax, two different plots for the SMC and the LMC are presented in the figure \ref{HR_SMC}.
 Most of the objects in the samples have a relatively short period ($<3$ d); a detailed period distribution
 is presented in the figure \ref{periods}.
@@ -347,18 +347,18 @@ is presented in the figure \ref{periods}.
 
 \begin{figure}[H]
     \begin{center}
-        \includegraphics[scale=0.6]{plots/HR_LMC_SMC.png}
-    \end{center}
-    \caption{A color-magnitude diagram of Gaia counterparts potentially residing in Magellanic Clouds (without statistically significant parallax).}
-    \label{HR_SMC}
-\end{figure}
-
-\begin{figure}[H]
-    \begin{center}
         \includegraphics[scale=0.5]{plots/HR.png}
     \end{center}
     \caption{A color-magnitude diagram of Gaia counterparts with statistically significant parallax.}
     \label{HR_galactic}
+\end{figure}
+
+\begin{figure}[H]
+    \begin{center}
+        \includegraphics[scale=0.6]{plots/HR_LMC_SMC.png}
+    \end{center}
+    \caption{A color-magnitude diagram of Gaia counterparts potentially residing in Magellanic Clouds (without statistically significant parallax).}
+    \label{HR_SMC}
 \end{figure}
 As a first step of preprocessing objects with brightness lower than
 $17$ mag  were removed as faint stars wouldn't be suitable for a radial velocity determination with the usage of high resolution spectroscopy.
@@ -488,7 +488,7 @@ A chain convergence was checked with a corner plot, two example plots are presen
 In order to help to decide between models
 the BIC score was used 
 \begin{equation}
-    BIC=k\log{n}-2\mathcal{L}
+    BIC=k\log{n}-2\ln{\mathcal{L}}
 \end{equation} where $k$ is a number of estimated parameters and $n$ is a number of data points. From all objects thirteen were selected based on the
 fit with the single star model.
 If the BIC score was lower in the case of the single star model star was selected as a candidate.
