@@ -40,16 +40,17 @@
     \let\footnoterule\relax
     \let \footnote \thanks
     \begin{center}%
-      {\LARGE\textbf{Warsaw University\\
+      {\LARGE\textbf{University of Warsaw\\
         Faculty of Physics}\par}
       \vspace{1cm plus 1fill} 
       {\Large\@author\par}
       \vspace{0.2cm}
-      {\large Index number: \@nralbumu\par}
+      {\large Record book number: \@nralbumu\par}
       \vspace{8mm plus .1fill}
       {\Huge\textbf{\@title}\par}
       \vspace{8mm plus .1fill}
-      {\large Bachelor degree in the field of Astronomy}
+      {\large Bachelor degree in the field of Astronomy\\
+      within Inter-Faculty Individual Studies in Mathematics and Natural Sciences}
       \vspace{2cm plus 1.5fill}
       \begin{flushright}\large
         \begin{tabular}{l}
@@ -134,7 +135,7 @@
 % \@klasyfikacja\par
   \vspace*{88pt}%
   \begin{center}%
-    \bfseries\large Thesis title in Polish language
+    \bfseries\large Thesis title in the Polish language
     \@endparpenalty\@M
   \end{center}
   \@tytulang\par

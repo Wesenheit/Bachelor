@@ -139,7 +139,7 @@ The X-ray emission from the X-ray binaries is mostly transient \citep{bambi_tran
 due to the instability of the accretion disc \citep{lasota_disc_2001}. Many of the X-ray binaries can remain undetected in the low-accreting
 regime for long periods, hence an all-sky monitoring in X-rays is necessary. According to \citet{corral-santana_blackcat_2016} 
 only $64$ stellar BH X-ray binaries have been detected to the present day, while only $5$ of them are considered persistent sources. 
-Of all those sources, only around $\sim 20$ of them are dynamically confirmed (from dynamically confirmed binaries only Cygnus X-1 is persistent). 
+Of all those sources, only around $\sim 20$ are dynamically confirmed (from dynamically confirmed binaries only Cygnus X-1 is persistent). 
 The rest of the candidates were not observed spectroscopically, as they are faint in quiescence, distant, or lie in high-extinction regions. 
 Although most of the observed BH binaries emit X-rays such systems should be outnumbered by nonaccreting binaries \citep{langer_properties_2020}. 
 The estimated total number of X-ray black holes in the Milky Way is around $\sim 10^3$ \citep{corral-santana_blackcat_2016}, suggesting that only a tiny fraction
@@ -163,7 +163,7 @@ but with the next releases of Gaia data, this number is expected to increase sig
 are powerful and on their own enable one to estimate masses of objects via the astrometric mass function.
 %Unfortunately, the expected yield of such astrometric solutions is quite low, as only wide binaries can be detected limiting the size of potential BH sample
 %that can be resolved with such observations.
-Compared to X-ray observations, astrometric measurements allow one to estimate the parameters of objects with much better accuracy, as they allow one to infer an inclination of a binary. 
+Compared to X-ray observations, astrometric measurements allow one to estimate the parameters of objects with much better accuracy, as they allow to infer an inclination of a binary. 
 This crucial parameter is very hard to constrain in most of the systems, in X-ray binaries it is usually estimated by modelling the ellipsoidal effect visible in the light curve,
 which can lead to mass overestimation as demonstrated by \citep{kreidberg_mass_2012}. 
 
@@ -268,7 +268,7 @@ as they have a closed analytical form and a small relative error.
 In the previous section, a new corrected formula was introduced allowing one to predict Fourier series coefficients based on physical parameters $q$, $f$, $i$.
 In reality, a light curve can be influenced by more than one modulation,
 limiting usability of the presented formula. To begin with, the MN93 formula is valid only for circular orbits. 
-To remove that limitation, one can reproduce the results using other types of expansion such as \citet{engel_beer_2020}. Moreover in the case of compact
+To remove that limitation, one can reproduce the results using other types of expansion such as \citet{engel_beer_2020}. Moreover, in the case of compact
 binary there may be need to take into account the relativistic beaming effect. Following \citet{loeb_periodic_2003} 
 \begin{equation}
     F_{\lambda}=F_{\lambda,0}\left(1-B\frac{v_r}{c}\right)
@@ -293,12 +293,12 @@ This property is crucial and provides a simple way to search for objects with po
 The most important parameter on which the whole analysis is based is $\alpha_2$.
 Following the original work $\alpha_2=1.2$ was set for observations in the I band and standard deviation $\Delta\alpha_2=0.1$
 was also assumed. This value
-solely represents the effects of temperature, gravity, and chemical composition, which is very important, as it encapsulates all unknown parameters. 
+solely represents the effects of temperature, gravity, and chemical composition, making this parameter the most crucial feature of the model, as it encapsulates all unknown parameters. 
 The exact value of the parameter greatly influences the modified mass ratio, which makes inference of the mass impossible without precise knowledge of $\alpha_2$.
 The detailed dependence of $\alpha_2$ on the effective temperature in the case of $\log g=4$ and $[Fe/H]=-1$ based on the limb and gravity darkening coefficients produced by
-\citet{claret_new_2000} is presented in the figure \ref{claret}.
+\citet{claret_new_2000} is presented in Figure \ref{claret}.
 This fact led the authors of the method to introduce the second parameter, which was originally defined as the $16$th percentile of the estimator $q_{mmr}$. The sole role of this
-parameter is to take into account the uncertainty of $\alpha$ acting as the lower bound of $q_{mmr}$. In this work, another parameter was introduced denoted as $\tilde{q}_{mmr}$ and defined
+parameter is to take into account the uncertainty of $\alpha$, acting as the lower bound of $q_{mmr}$. In this work, another parameter was introduced denoted as $\tilde{q}_{mmr}$ and defined
 using the equation
 \begin{equation*}\label{lower}
     A_2(\tilde{q}_{mmr},0.98,\pi/2,1.1)=\tilde{A_2}-\Delta A_2
@@ -331,12 +331,12 @@ From the OGLE \citep{udalski_optical_1992} database following two samples were a
 \end{itemize*}
 The light curves used in the analysis were collected during the $4$ th season of OGLE \citet{udalski_ogle-iv_2015}
 and were collected in the $I$ band.
-Detailed positions of objects from the original samples in the sky are presented in the figure \ref{map}. Then for each entry the nearest Gaia source
+Detailed positions of objects from the original samples in the sky are presented in Figure \ref{map}. Then for each entry the nearest Gaia source
 was found and for objects without statistically significant parallax (value higher than three times its statistical deviation) a color-magnitude
-diagram using the Gaia data was constructed and is presented in the figure \ref{HR_SMC} (with a division between SMC and LMC). Similarly, a color-magnitude diagram was constructed for
-objects with statistically significant parallax and presented in the figure \ref{HR_galactic}.
+diagram using the Gaia data was constructed and is presented in Figure \ref{HR_SMC} (with a division between SMC and LMC). Similarly, a color-magnitude diagram was constructed for
+objects with statistically significant parallax and presented in Figure \ref{HR_galactic}.
 Most of the objects in the samples have a relatively short period ($<3$ d); a detailed period distribution
-is presented in the figure \ref{periods}.
+is presented in Figure \ref{periods}.
 \begin{figure}
     \begin{center}
         \includegraphics[scale=0.52]{plots/map_sample.png}
@@ -485,7 +485,7 @@ Other packages used in the study are \texttt{astroquery} \citep{ginsburg_astroqu
 \texttt{corner} \citep{foreman-mackey_cornerpy_2016} and \texttt{astropy} \citep{astropy_collaboration_astropy_2022}.
 Each sampling was carried out with $32$ walkers for $2000$ steps (with $750$ step burn-in); in the case of a double model, each sampling 
 was followed by a second one with starting conditions sampled from the first chain. 
-Chain convergence was checked with a corner plot, two example plots are presented in the figure
+Chain convergence was checked with a corner plot, two example plots are presented in Figure
 \ref{corner_1}.
 In order to help to decide between models
 the BIC score was used 
@@ -689,11 +689,11 @@ available for objects GD1070.18.22288 and SMC720.28.40576 while the third is ded
 \end{figure}
 GD1070.18.22280 has the longest period compared to other selected objects with $P\approx 45$ d and was listed as a plausible candidate only because of the reported X-ray emission.
 Due to an excess amount of observations in many parts of the spectra, it was possible to obtain a high-quality spectral energy distribution fit that revealed two sources with different temperatures;
-detailed distribution can be seen in the figure \ref{GD1070SED}.
+detailed distribution can be seen in Figure \ref{GD1070SED}.
 One of the objects with a rather low effective temperature of
 $T\approx 3800$ K has radius $R\approx 10$ $\textrm{R}_{\odot}$ and was quite far from any evolutionary track in the PARSEC database. This can indicate
 that was stripped in the past by its companion.
-The position of the cold companions in the HR diagram is presented in the figure \ref{HR_cold}.
+The position of the cold companions in the HR diagram is presented in Figure \ref{HR_cold}.
 The object can also be found in the ASAS-SN database \citep{jayasinghe_asas-sn_2019} under the identification number J170801.81-410255.6 where it is classified
 as a rotational variable star with half of the period found in this work. The ASAS-SN observed it in the $V$ and SDSS $g$ bands, allowing light curves to be compared with the OGLE one.
 Furthermore, the object was observed in the SDSS $i$ band by the Bochum Galactic Disk Survey \citep{hackstein_bochum_2015}. The comparison between all light curves can be found in the graph \ref{comp}.
@@ -737,12 +737,12 @@ This particular point source, although quite faint, coincides with the position 
 In the publication it was found that X-ray emission is best fitted with an absorbed power law by hydrogen density $n_H=2.0\times 10^{21}$ $\textrm{cm}^{-2}$.
 Interestingly, the assumed distance of $3$ kpc based on radio observations is nearly three times higher than the value obtained using the parallax from the Gaia DR3.
 The X-ray luminosity based on the Gaia parallax for different times roughly lies in the range $L_{X}=(1-3)\cdot10^{31}$ erg/s.\hfil \break%\par\hspace{\parindent}
-\hspace*{17.62482 pt} As one can see in the figure \ref{comp} there is a discrepancy between the curves in the $I$ band and the curves from ASAS-SN.
+\hspace*{17.62482 pt} As one can see in Figure \ref{comp} there is a discrepancy between the curves in the $I$ band and the curves from ASAS-SN.
 This discrepancy can be explained after investigation when light curves were collected. The OGLE
 light curve is composed of observations collected from $2456467$ to $2458734$ HJD, but most samples were collected before $2457201$ HJD.
 On the other hand, ASAS-SN observations were collected in the $g$ band after $2459797$ HJD. Based on ASAS-SN archive data,
 there is a visible change around $2459100$ when the period decreases from $\sim 45$ d to nearly half the value around $\sim22.4$ d.
-This observation, together with the evolution of the amplitude of the variability as presented in the figure \ref{evolution},
+This observation, together with the evolution of the amplitude of the variability as presented in Figure \ref{evolution},
 suggests that the object represents a class of rotational variables.
 This can also be partially supported by the X-ray emission from the system; it is widely known that many rotational variables like RS Canum Venaticorum can
 emit X-rays with a luminosity around $\sim 10^{31}$ erg/s \citep{walter_x-rays_1980}, so the value obtained from XMM 
@@ -758,16 +758,17 @@ scope of the work.
 
 
 \subsection{SMC720.28.40576}
-\begin{figure}[H]
+\begin{figure}%[H]
       \centering
       \includegraphics[scale=0.35]{plots/SMC720.28.40576_phase.png}
       \caption{Light curve of SMC720.28.40576 collected by the OGLE project.}
       \label{SMC720:lc}
 \end{figure}
 SMC720.28.40576 is the only object in the sample that is probably located in Magellanic Clouds as the measured parallax is statistically insignificant.
+The estimated period of the variable is nearly half of the day; such a short period suggests a very compact setup of stars.
+The detailed light curve together with the residuals of the forth-degree Fourier model is presented in Figure \ref{SMC720:lc}.
 %Estimated parameters suggest it isspectral type O according to a single-model SED fit \ref{SMC720:sed}.
 The SED fit estimate suggests the star to be spectral type O, measured magnitudes with the best-fitting spectra are presented in figure \ref{SMC720:sed}.
-The estimated period of the variable is nearly half of the day; such a short period suggests a very compact setup of stars.
 The PARSEC evolutionary track estimates the mass of the object to be around $16$  $\textrm{M}_{\odot}$.
 Star was published already in \citet{pawlak_ogle_2016} and classified as a contact binary. Although
 no companion is visible in the SED distribution, it might hide itself in the light of a primary star.
@@ -789,7 +790,7 @@ The second MCMC run was performed and $64000$ samples were drowned from the post
 The SED fit is performed assuming $\log g_1=4$ and $\log g_2=4$, since one expects the secondary component to be the
 main sequence star. 
 The results of the MCMC sampling were plotted on samples from the HYG
-database\footnote{https://www.astronexus.com/hyg} and are presented in the figure \ref{posterior}
+database\footnote{https://www.astronexus.com/hyg} and are presented in Figure \ref{posterior}
 \begin{figure}[H]
     \includegraphics[scale=0.6]{plots/posterior_estimate_SMC720.png}
     \caption{The posterior estimate for the parameters of SMC720.28.40576 highlighted in red (primary component)
@@ -824,7 +825,7 @@ with the contact system of two similar stars. In such a compact setup stars are 
 they are well fitted with the single star model. 
 
 This line of inquiry was further investigated, and objects were fitted using the
-PHOEBE simulation software (\citet*{wilson_realization_1971},\citet*{prsa_computational_2005},\citet*{conroy_physics_2020}).
+PHOEBE simulation software \citep{wilson_realization_1971,prsa_computational_2005,conroy_physics_2020}.
 The model was constructed in such a way that both stars shared the temperature $T$ (inferred from a single model SED) and were overflowing their Roche lobes.
 Only objects from the galactic disc sample were analysed as it is possible to compare estimates of radial velocity semiamplitude with
 values from the light-curve modelling.
@@ -866,8 +867,8 @@ results, the predicted value of velocity semi-amplitude is twice that of the val
 Moreover, the amplitude of radial velocity measured by the Gaia mission is equal $ 410.92 $ km/s questioning the previous estimate of radial velocity.
 This can be explained either by an eccentric orbit of the star or by outliner measurements that were not removed as part of a preprocessing.
 If this value is correct and if one assumes the mass of the primary star from the PARSEC fit, the lower bound for the companions mass is $\sim 0.8$ M$_\odot$, detailed 
-dependence between $\sin(i)$ and $M_2$ is presented in the figure \ref{second_mass}. Hence, GD2246.03.1814 is potentially the most promising candidate for a 
-dormant compact companion.
+dependence between $\sin(i)$ and $M_2$ is presented in Figure \ref{second_mass}. Hence, GD2246.03.1814 is potentially the most promising candidate for a 
+dormant compact companion. All light curve models are presented in Appendix C.
 
 The values obtained from the fit can be quite distant from reality, as there is not enough data to constrain the parameters of the model.
 Despite this fact, as demonstrated, not only some of the objects can be well described using the contact model, but in all cases contact model can achieve an amplitude comparable to the real one. This makes such binaries one of the great weaknesses of the method described
