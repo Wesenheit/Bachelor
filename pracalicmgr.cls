@@ -49,12 +49,12 @@
       \vspace{8mm plus .1fill}
       {\Huge\textbf{\@title}\par}
       \vspace{8mm plus .1fill}
-      {\large Bachelor degree in the field of Astronomy\\
+      {\large Bachelor thesis in the field of Astronomy\\
       within Inter-Faculty Individual Studies in Mathematics and Natural Sciences}
       \vspace{2cm plus 1.5fill}
       \begin{flushright}\large
         \begin{tabular}{l}
-          Thesis written under supervision of \\
+          Thesis written under the supervision of \\
            \@opiekun
         \end{tabular}
       \end{flushright}
@@ -135,7 +135,7 @@
 % \@klasyfikacja\par
   \vspace*{88pt}%
   \begin{center}%
-    \bfseries\large Thesis title in the Polish language
+    \bfseries\large Title of the Thesis in the Polish language
     \@endparpenalty\@M
   \end{center}
   \@tytulang\par
