@@ -332,9 +332,9 @@ From the OGLE \citep{udalski_optical_1992} database following two samples were a
 The light curves used in the analysis were collected during the $4$ th season of OGLE \citet{udalski_ogle-iv_2015},
 and were collected in the $I$ band.
 Detailed positions of objects from the original samples in the sky are presented in the figure \ref{map}. Then for each entry the nearest Gaia source
-was found and for objects with statistically significant parallax (value higher than three times it's statistical deviation) a color-magnitude
-diagram using the Gaia data was constructed and is presented in the figure \ref{HR_galactic}. Similarly a color-magnitude diagram was constructed for
-objects without statistical significant parallax, two different plots for the SMC and the LMC are presented in the figure \ref{HR_SMC}.
+was found and for objects without statistically significant parallax (value higher than three times it's statistical deviation) a color-magnitude
+diagram using the Gaia data was constructed and is presented in the figure \ref{HR_SMC} (with division between SMC and LMC/MBR). Similarly a color-magnitude diagram was constructed for
+objects with statistical significant parallax and presented in the figure \ref{HR_galactic}.
 Most of the objects in the samples have a relatively short period ($<3$ d); a detailed period distribution
 is presented in the figure \ref{periods}.
 \begin{figure}
@@ -347,19 +347,21 @@ is presented in the figure \ref{periods}.
 
 \begin{figure}[H]
     \begin{center}
+        \includegraphics[scale=0.6]{plots/HR_LMC_SMC.png}
+    \end{center}
+    \caption{A color-magnitude diagram of Gaia counterparts potentially residing in Magellanic Clouds (without statistically significant parallax).}
+    \label{HR_SMC}
+\end{figure}
+
+
+\begin{figure}[H]
+    \begin{center}
         \includegraphics[scale=0.5]{plots/HR.png}
     \end{center}
     \caption{A color-magnitude diagram of Gaia counterparts with statistically significant parallax.}
     \label{HR_galactic}
 \end{figure}
 
-\begin{figure}[H]
-    \begin{center}
-        \includegraphics[scale=0.6]{plots/HR_LMC_SMC.png}
-    \end{center}
-    \caption{A color-magnitude diagram of Gaia counterparts potentially residing in Magellanic Clouds (without statistically significant parallax).}
-    \label{HR_SMC}
-\end{figure}
 As a first step of preprocessing objects with brightness lower than
 $17$ mag  were removed as faint stars wouldn't be suitable for a radial velocity determination with the usage of high resolution spectroscopy.
 Each object was analysed using the ANOVA (analysis of variance) method \citep{schwarzenberg-czerny_advantage_1989} to determine the period.
@@ -494,7 +496,7 @@ fit with the single star model.
 If the BIC score was lower in the case of the single star model star was selected as a candidate.
 If the BIC score was lower in the case of the double star model object was rejected unless
 \begin{itemize*}
-    \item the most luminous star in the double star model is significantly brighter then other and had $\log g=2$,
+    \item the most luminous star in the double star model is significantly brighter then other and has $\log g=2$,
     \item some stars in the model have unphysical solutions (i.e. luminosity of the star is too low for star with $T=20000$ K).
 \end{itemize*}
 There might be a possibility that the photometry can be better fitted with lower gravity and hence, despite the fact that binary
@@ -547,9 +549,10 @@ $\log{g}$/Z is not investigated, which can be crucial to obtain a high quality s
 between objects, as few of them can be better fitted with the given metallicity/$\log{g}$
 (for example ultraviolet observations can be sensitive not only to the temperature of the star but also to its metallicity).
 Even if some objects won't be accuratly described, it is still possible to reliable assess if there are one or more stars contributing to the spectra.
-The SED fits of the single model together with light curves are presented in the Appendix A. Each subsection consists of the phased light curve, the
-SED fit plot, the corner plot for the posterior distribution and other relevant data.
-\newpage
+The SED fits together with light curves are presented in the Appendix A.
+%Each subsection consists of the phased light curve, the
+%SED fit plot, the corner plot for the posterior distribution and other relevant data.
+%\newpage
 \begin{figure}
     \begin{subfigure}{1\textwidth}
         \centering
